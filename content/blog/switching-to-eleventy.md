@@ -18,8 +18,8 @@ The heading anchors are now clickable and copyable, which is a nice quality-of-l
 
 ## Debloating
 
-The homepage now weighs in at a svelte [insert size] kB, which is a [insert reduction]% improvement from before. Part of this involved removing unused styles, unnecessary icons, and the Umami analytics script.
+The homepage now weighs in at a svelte 21.12kB kB (uncompressed), which is a 75% improvement from before. Part of this involved removing unused styles, unnecessary icons, and the Umami analytics script.
 
 ## Conclusion
 
-I love Eleventy!
+I love Eleventy! The docs were fairly pleasant, it builds incredibly quickly, and it is organized logically. While its error messages were cryptic, I would still use it happily again.
