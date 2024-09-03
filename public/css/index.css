@@ -1,0 +1,388 @@
+/* variables */
+
+:root {
+	--text-color: #444444;
+	--secondary-text-color: #908d8d;
+	--background: #eeeeee;
+	--secondary-background: #cccccc;
+	--tertiary-background: #bbbbbb;
+	--primary-accent: #7577ff;
+	--secondary-accent: #d480aa;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text-color: #c9cacc;
+		--background: #1d1f21;
+		--secondary-background: #2e3235;
+		--tertiary-background: #3f4347;
+	}
+}
+
+/* base */
+
+@media screen and (min-width: 480px) {
+	body {
+		padding: 0 10px;
+	}
+}
+
+body {
+	background-color: var(--background);
+	margin: 40px auto 0 auto;
+	max-width: 650px;
+	line-height: 1.6;
+	color: var(--text-color);
+	padding: 0 1em;
+	min-height: calc(100vh - 42px);
+	display: flex;
+	flex-direction: column;
+}
+
+section,
+section:target ~ section:last-of-type {
+	display: none;
+	padding: 0;
+}
+
+section:target,
+section:last-of-type {
+	display: block;
+	scroll-margin-top: 100vh;
+}
+
+/* text */
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+* {
+	font-family: "Berkeley Mono", monospace;
+}
+
+code {
+	opacity: 0.7;
+}
+
+pre {
+	border-radius: 5px;
+	padding: 4px;
+}
+
+pre code {
+	opacity: 1;
+}
+
+h1 {
+	display: block;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	color: var(--primary-accent);
+	letter-spacing: 0.01em;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 1.5em;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+h2 {
+	position: relative;
+	display: block;
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+	text-transform: none;
+	letter-spacing: normal;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+h3 {
+	text-decoration: underline;
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+h4,
+h5,
+h6 {
+	display: inline;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0.9rem;
+	margin-bottom: 0.5rem;
+}
+
+a {
+	color: var(--text-color);
+	text-decoration: none;
+	background-image: linear-gradient(
+		transparent,
+		transparent 5px,
+		var(--text-color) 5px,
+		var(--text-color)
+	);
+	background-position: bottom;
+	background-size: 100% 6px;
+	background-repeat: repeat-x;
+}
+
+a:hover {
+	background-image: linear-gradient(
+		transparent,
+		transparent 4px,
+		var(--secondary-accent) 4px,
+		var(--secondary-accent)
+	);
+}
+
+a[href*="//"]:after
+{
+	font-weight: 300;
+	font-size: 0.85em;
+	content: "\2197";
+	opacity: 0.5;
+}
+
+a[href*="//"]:hover:after
+{
+	opacity: 1;
+}
+
+.header-anchor {
+	color: var(--primary-accent);
+	background: none;
+}
+
+.header-anchor:hover {
+	background: none;
+	text-decoration: underline;
+}
+
+footer {
+	font-size: 0.8em;
+	color: var(--secondary-text-color);
+	margin-top: auto;
+}
+
+@media screen and (max-width: 480px) {
+	footer {
+		text-align: center;
+	}
+}
+
+/* header */
+
+header {
+	margin: 0 auto 2rem;
+	width: 100%;
+}
+
+header h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: var(--text-color);
+	letter-spacing: 0.01em;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+header a {
+	background: 0 0;
+	color: inherit;
+	text-decoration: none;
+}
+
+header #logo {
+	float: left;
+	margin-right: 20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+
+header:hover #logo {
+	filter: none;
+	-webkit-filter: none;
+}
+
+header nav {
+	color: var(--primary-accent);
+	letter-spacing: 0.01em;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 0.85rem;
+	display: flex;
+}
+
+header nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	line-height: 15px;
+}
+
+header nav ul a {
+	margin-right: 0.9em;
+	text-align: center;
+}
+
+header nav ul a:hover {
+	background-image: linear-gradient(
+		transparent,
+		transparent 5px,
+		var(--primary-accent) 5px,
+		var(--primary-accent)
+	);
+	background-position: bottom;
+	background-size: 100% 6px;
+	background-repeat: repeat-x;
+}
+
+header nav ul li {
+	display: inline-block;
+	margin-right: 0.9em;
+	border-right: 1px dotted;
+	border-color: var(--primary-accent);
+	vertical-align: middle;
+}
+
+header nav ul li:last-child {
+	margin-right: 0;
+	border-right: 0;
+}
+
+header nav ul li:last-child a {
+	margin-right: 0;
+}
+
+@media screen and (max-width: 480px) {
+	header #title h1 {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+/* posts */
+
+.post-title {
+	margin-bottom: 0;
+}
+
+.postlist {
+	padding: 0;
+}
+
+.postlist .postlist-item {
+	margin-bottom: 0.2rem;
+	margin-left: 0;
+	list-style-type: none;
+}
+
+.postlist .postlist-item .postlist-date {
+	color: #908d8d;
+	font-size: 0.9rem;
+	margin-right: 1em;
+}
+
+@media (max-width: 480px) {
+	.postlist .postlist-item {
+		margin-bottom: 0.75em;
+	}
+
+	.postlist .postlist-item .postlist-date {
+		display: flex;
+	}
+}
+
+.post-metadata {
+	padding: 0;
+}
+
+.post-metadata li {
+	display: inline-block;
+}
+
+@media (min-width: 480px) {
+	.post-tags {
+		display: inline;
+	}
+
+	.post-tags:before {
+		content: "|";
+		margin-left: 0.25em;
+		margin-right: 0.25em;
+	}
+}
+
+/* previous & next post */
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0;
+	margin: 2em 0 0 0;
+}
+
+.links-previous,
+.links-next {
+	width: 50%;
+}
+
+.links-nextprev a {
+	word-wrap: break-word;
+}
+
+.links-previous {
+	margin-right: auto;
+}
+
+.links-next {
+	margin-left: auto;
+}
+
+/* nice touches */
+html {
+	border-top: 2px solid #c9cacc;
+}
+
+.pagination a {
+	color: var(--text-color);
+	padding: 4px 6px;
+	text-decoration: none;
+	border-radius: 5px;
+	background-color: var(--secondary-background);
+	background-image: none;
+}
+
+.pagination a:hover {
+	background-color: var(--tertiary-background);
+}
+
+.pagination .page-number {
+	color: var(--text-color);
+	font-size: 0.9rem;
+}

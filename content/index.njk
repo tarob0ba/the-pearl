@@ -1,0 +1,34 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+numberOfLatestPostsToShow: 4
+---
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+<p>The Pearl is the blog/commentary/incoherent rambling of a boba fanatic. 🧋</p>
+<p>Find me on <a rel="me" href="https://chaos.social/@tarob0ba" target="_blank">Fedi</a> and <a href="https://github.com/tarob0ba" target="_blank">GitHub</a>.</p>
+
+<h1>Writing</h1>
+
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+
+<div class="pagination">
+	<span class="page-number"><a href="/blog">Showing {{numberOfLatestPostsToShow}} of {{postsCount}}</a></span>
+</div>
+{% endif %}
+
+{# List every content page in the project #}
+{#
+<ul>
+	{%- for entry in collections.all %}
+	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+	{%- endfor %}
+</ul>
+#}
