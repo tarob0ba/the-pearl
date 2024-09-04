@@ -45,5 +45,8 @@
 		"posthtml": "^0.16.6",
 		"posthtml-minify-classnames": "^1.0.0-alpha.0",
 		"prettier": "3.3.3"
+	},
+	"dependencies": {
+		"markdown-it-footnote": "^4.0.0"
 	}
 }

@@ -148,6 +148,11 @@ module.exports = function (eleventyConfig) {
 		return content;
 	});
 
+	// markdown-it plugins
+	eleventyConfig.amendLibrary("md", (mdLib) =>
+		mdLib.use(require("markdown-it-footnote")),
+	);
+
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line
