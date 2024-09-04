@@ -12,6 +12,8 @@ const pluginImages = require("./eleventy.config.images.js");
 
 const htmlmin = require("html-minifier-terser");
 const CleanCSS = require("clean-css");
+const posthtml = require("posthtml");
+const minify = require("posthtml-minify-classnames");
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
@@ -123,6 +125,18 @@ module.exports = function (eleventyConfig) {
 				removeComments: true,
 				collapseWhitespace: true,
 			});
+
+			return minified;
+		}
+
+		return content;
+	});
+
+	eleventyConfig.addTransform("htmlminclassnames", function (content) {
+		if ((this.page.outputPath || "").endsWith(".html")) {
+			let minified = posthtml()
+				.use(minify({}))
+				.process(content, { sync: true }).html;
 
 			return minified;
 		}

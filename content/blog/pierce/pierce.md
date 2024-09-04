@@ -1,7 +1,7 @@
 ---
-title: 'Pierce: A year in review'
+title: "Pierce: A year in review"
 date: 2023-03-12
-tags: ['cactus', 'pierce']
+tags: ["cactus", "pierce"]
 ---
 
 Sitting down to write about Pierce has brought a smile upon my face. Pierce has been a stable element of my life for almost a year now and he has brought me so much joy. Although writing about a cactus may seem strange, it is hard to describe the ways that Pierce is different; it is almost as if he has his own presence.
