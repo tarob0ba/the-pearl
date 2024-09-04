@@ -135,7 +135,11 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addTransform("htmlminclassnames", function (content) {
 		if ((this.page.outputPath || "").endsWith(".html")) {
 			let minified = posthtml()
-				.use(minify({}))
+				.use(
+					minify({
+						genNameId: false,
+					}),
+				)
 				.process(content, { sync: true }).html;
 
 			return minified;
