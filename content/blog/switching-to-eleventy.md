@@ -18,7 +18,7 @@ The heading anchors are now clickable and copyable, which is a nice quality-of-l
 
 ## Debloating
 
-The homepage now weighs in at a svelte 21.12kB kB (uncompressed), which is a 75% improvement from before. Part of this involved removing unused styles, unnecessary icons, and the Umami analytics script.
+The homepage now weighs in at a svelte 20.27 kB (uncompressed), which is a 75% improvement from before. Part of this involved removing unused styles, unnecessary icons, and the Umami analytics script.
 
 ## Conclusion
 
