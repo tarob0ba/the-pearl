@@ -353,11 +353,6 @@ header nav ul li:last-child a {
 	margin: 2em 0 0 0;
 }
 
-.links-previous,
-.links-next {
-	width: 50%;
-}
-
 .links-nextprev a {
 	word-wrap: break-word;
 }
@@ -373,6 +368,8 @@ header nav ul li:last-child a {
 /* nice touches */
 html {
 	border-top: 2px solid #c9cacc;
+	overflow-y: auto;
+	scrollbar-gutter: stable;
 }
 
 .pagination a {

@@ -1,7 +1,7 @@
 ---
 title: How to make a milk tea
 date: 2022-05-07
-tags: ["tea", "boba"]
+tags: ["tea", "boba", "recipe"]
 ---
 
 ## What is milk tea?
