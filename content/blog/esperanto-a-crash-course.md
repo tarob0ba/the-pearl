@@ -4,7 +4,7 @@ date: 2024-09-05
 tags: ["esperanto"]
 ---
 
-I like Esperanto. While it has its drawbacks, it's certainly a neat language to learn. I especially like that its (relative) ease makes learning the language very rewarding because it is possible to progress quickly with study. In this post, I'm going to give you an short overview of the language's grammar.
+I like Esperanto. While it has its drawbacks, it's certainly a neat language to learn. I especially like that its (relative) ease makes learning the language very rewarding because it is possible to progress quickly with study. In this post, I'm going to give you a short overview of the language's grammar.
 
 ## Background
 
